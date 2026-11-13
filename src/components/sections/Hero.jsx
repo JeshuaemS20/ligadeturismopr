@@ -1,7 +1,6 @@
-import { ArrowRight, ChevronDown, ExternalLink, Globe, Landmark, TreePalm } from 'lucide-react';
+import { ArrowRight, ChevronDown, Globe, Landmark, TreePalm } from 'lucide-react';
 import { LigaEmblem } from '../LigaLogo.jsx';
 import { BlurText, Reveal, WaveDivider } from '../animations.jsx';
-import { SITE } from '../../data/content.js';
 
 const HERO_TAGS = [
   { icon: Globe, label: 'Alcance Global', color: 'text-gold-light' },
@@ -59,26 +58,17 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={850}>
-            <div className="mt-9 flex flex-col items-center gap-3.5 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
-              <a
-                href={SITE.platformUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-gold px-7 py-4 text-base font-bold text-navy shadow-lg shadow-gold/25 transition-all hover:-translate-y-0.5 hover:bg-gold-light sm:w-auto"
-              >
-                Explorar {SITE.platformName}
-                <ExternalLink className="h-5 w-5" aria-hidden="true" />
-              </a>
+            <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <a
                 href="#unete"
-                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-tropical px-7 py-4 text-base font-bold text-white shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-tropical/90 sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-gold px-7 py-4 text-base font-bold text-navy shadow-lg shadow-gold/25 transition-all hover:-translate-y-0.5 hover:bg-gold-light sm:w-auto"
               >
                 Únete a la Liga
-                <ArrowRight className="h-5 w-5 text-gold-light" aria-hidden="true" />
+                <ArrowRight className="h-5 w-5" aria-hidden="true" />
               </a>
               <a
                 href="#quienes-somos"
-                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border-2 border-white/40 px-6 py-4 text-base font-bold text-white transition-all hover:border-white hover:bg-white/10 sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border-2 border-white/40 px-7 py-4 text-base font-bold text-white transition-all hover:border-white hover:bg-white/10 sm:w-auto"
               >
                 Conoce quiénes somos
               </a>

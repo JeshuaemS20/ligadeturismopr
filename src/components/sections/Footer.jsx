@@ -1,4 +1,4 @@
-import { ArrowUp, ExternalLink, Mail, MapPin, Phone, UserCheck } from 'lucide-react';
+import { ArrowUp, Mail, MapPin, Phone, UserCheck } from 'lucide-react';
 import LigaLogo from '../LigaLogo.jsx';
 import { NAV_LINKS, SITE } from '../../data/content.js';
 
@@ -45,17 +45,6 @@ export default function Footer() {
               <li>
                 <a href="#unete" className="text-white/80 transition-colors hover:text-gold-light">
                   Únete a la Liga
-                </a>
-              </li>
-              <li>
-                <a
-                  href={SITE.platformUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-semibold text-gold-light transition-colors hover:text-white"
-                >
-                  {SITE.platformName}
-                  <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                 </a>
               </li>
             </ul>

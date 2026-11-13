@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, ArrowRight, ExternalLink } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 import LigaLogo from '../LigaLogo.jsx';
-import { NAV_LINKS, SITE } from '../../data/content.js';
+import { NAV_LINKS } from '../../data/content.js';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -89,28 +89,13 @@ export default function Navbar() {
           })}
         </ul>
 
-        <div className="hidden items-center gap-2.5 lg:flex">
-          <a
-            href={SITE.platformUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-2.5 text-sm font-bold transition-all hover:-translate-y-0.5 ${
-              solid
-                ? 'border-tropical/30 bg-tropical/10 text-tropical hover:bg-tropical hover:text-white'
-                : 'border-white/30 bg-white/10 text-white hover:bg-white/20'
-            }`}
-          >
-            {SITE.platformName}
-            <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-          </a>
-          <a
-            href="#unete"
-            className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-bold text-navy shadow-md shadow-gold/30 transition-all hover:-translate-y-0.5 hover:bg-gold-light"
-          >
-            Únete a la Liga
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </a>
-        </div>
+        <a
+          href="#unete"
+          className="hidden items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-bold text-navy shadow-md shadow-gold/30 transition-all hover:-translate-y-0.5 hover:bg-gold-light lg:inline-flex"
+        >
+          Únete a la Liga
+          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        </a>
 
         {/* Botón móvil */}
         <button
@@ -150,26 +135,14 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <div className="mt-5 flex flex-col gap-2.5">
-          <a
-            href={SITE.platformUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
-            className="flex w-full items-center justify-center gap-2 rounded-xl border border-tropical/30 bg-tropical/10 px-5 py-3.5 text-sm font-bold text-tropical"
-          >
-            Ir a {SITE.platformName}
-            <ExternalLink className="h-4 w-4" aria-hidden="true" />
-          </a>
-          <a
-            href="#unete"
-            onClick={() => setOpen(false)}
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-gold px-5 py-3.5 text-sm font-bold text-navy"
-          >
-            Únete a la Liga
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </a>
-        </div>
+        <a
+          href="#unete"
+          onClick={() => setOpen(false)}
+          className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-gold px-5 py-3.5 text-sm font-bold text-navy"
+        >
+          Únete a la Liga
+          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        </a>
       </div>
     </header>
   );

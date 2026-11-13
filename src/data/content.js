@@ -29,9 +29,10 @@ export const SITE = {
   instagramUrl: 'https://www.instagram.com/ligadeturismopr',
   location: 'San Juan, Puerto Rico',
   platformName: 'Destination Connect',
-  platformUrl: 'https://desttination-connect.vercel.app/',
   platformDesc:
-    'Plataforma oficial de inteligencia turística y conexión de destinos de Puerto Rico. Explora lugares, rutas escénicas, eventos e itinerarios en tiempo real en los 78 municipios de la Isla.',
+    'Destination Connect es nuestra plataforma oficial de inteligencia turística y conexión de destinos de Puerto Rico. Conecta en tiempo real a visitantes y municipios con lugares, playas, gastronomía, rutas escénicas, eventos e indicadores turísticos en los 78 municipios de la Isla.',
+  platformAccessNote:
+    'El acceso a la plataforma requiere suscripción o membresía activa. Contáctanos para solicitar tu acceso o conocer los planes disponibles.',
 };
 
 export const NAV_LINKS = [
@@ -48,7 +49,7 @@ export const MEMBERS_WE_UNITE = [
   'Restaurantes y gastronomía',
   'Artesanos y gestores culturales',
   'Municipios y comunidades',
-  'Academia y estudiantes',
+  'Profesores y estudiantes',
 ];
 
 export const EMBLEM_SYMBOLS = [
@@ -60,7 +61,7 @@ export const EMBLEM_SYMBOLS = [
     swatch: 'bg-navy',
     ring: 'ring-navy/20',
     spotlight: 'rgba(3, 40, 89, 0.14)',
-    meaning: 'Alcance global y excelencia',
+    meaning: 'Alcance Global y Excelencia',
     detail:
       'El globo que enmarca nuestro emblema representa la proyección internacional de Puerto Rico y el estándar de excelencia con el que la Liga representa a su industria ante el mundo.',
   },
@@ -146,7 +147,7 @@ export const STRATEGIC_AREAS = [
     tone: 'gold',
     body:
       'Desarrollamos talleres, seminarios y certificaciones que elevan la calidad del servicio y preparan a la próxima generación de profesionales del turismo.',
-    points: ['Talleres de servicio y hospitalidad', 'Certificaciones profesionales', 'Alianzas con la academia'],
+    points: ['Talleres de servicio y hospitalidad', 'Certificaciones Profesionales', 'Alianzas con profesores y estudiantes'],
   },
   {
     title: 'Turismo Sostenible y Comunitario',
@@ -175,6 +176,7 @@ export const IMPACT_STATS = [
 
 export const MEMBERSHIP_TYPES = [
   { value: '', label: 'Seleccione una opción' },
+  { value: 'destination-connect', label: 'Suscripción / Acceso a Destination Connect' },
   { value: 'empresa', label: 'Membresía empresarial' },
   { value: 'profesional', label: 'Membresía profesional / individual' },
   { value: 'institucional', label: 'Alianza institucional o patrocinio' },

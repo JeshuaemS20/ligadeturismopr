@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { CircleAlert, CircleCheck, ExternalLink, LoaderCircle, Mail, MapPin, Phone, Send, UserCheck } from 'lucide-react';
+import { CircleAlert, CircleCheck, LoaderCircle, Mail, MapPin, Phone, Send, UserCheck } from 'lucide-react';
 import { Reveal } from '../animations.jsx';
 import { MEMBERSHIP_TYPES, MEMBER_BENEFITS, SITE } from '../../data/content.js';
 import { submitAffiliation } from '../../services/contact.js';
@@ -218,15 +218,6 @@ export default function Contact() {
                   <MapPin className="h-5 w-5 shrink-0 text-gold-light" aria-hidden="true" />
                   {SITE.location}
                 </p>
-                <a
-                  href={SITE.platformUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 pt-1 text-sm font-bold text-gold-light hover:underline"
-                >
-                  Visitar {SITE.platformName}
-                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
-                </a>
               </div>
             </div>
 
