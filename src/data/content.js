@@ -21,7 +21,7 @@ export const SITE = {
   name: 'Liga de Turismo de Puerto Rico, Inc.',
   shortName: 'Liga de Turismo',
   presidentName: 'Víctor A. González Vega',
-  presidentRole: 'Presidente / Director Ejecutivo',
+  presidentRole: 'Director Ejecutivo',
   presidentPhone: '(787) 463-2916',
   presidentPhoneTel: '+17874632916',
   email: 'liga.turismopr@gmail.com',

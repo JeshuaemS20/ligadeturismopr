@@ -61,7 +61,7 @@ export default function About() {
                 al mundo con el calor humano que distingue a Puerto Rico.”
               </p>
               <footer className="mt-2 text-xs font-bold uppercase tracking-wider text-tropical">
-                — Víctor A. González Vega, Presidente · Liga de Turismo de Puerto Rico, Inc.
+                — Víctor A. González Vega, Director Ejecutivo · Liga de Turismo de Puerto Rico, Inc.
               </footer>
             </blockquote>
           </Reveal>
