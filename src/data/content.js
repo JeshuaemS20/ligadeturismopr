@@ -21,7 +21,7 @@ export const SITE = {
   name: 'Liga de Turismo de Puerto Rico, Inc.',
   shortName: 'Liga de Turismo',
   presidentName: 'Víctor A. González Vega',
-  presidentRole: 'Presidente',
+  presidentRole: 'Presidente / Director Ejecutivo',
   presidentPhone: '(787) 463-2916',
   presidentPhoneTel: '+17874632916',
   email: 'liga.turismopr@gmail.com',
@@ -39,8 +39,68 @@ export const NAV_LINKS = [
   { id: 'inicio', label: 'Inicio' },
   { id: 'quienes-somos', label: 'Quiénes Somos' },
   { id: 'mision-vision', label: 'Misión y Visión' },
+  { id: 'equipo', label: 'Equipo' },
   { id: 'que-hacemos', label: 'Qué Hacemos' },
   { id: 'impacto', label: 'Impacto' },
+];
+
+export const TEAM_MEMBERS = [
+  {
+    name: 'Víctor A. González Vega',
+    role: 'Director Ejecutivo',
+    photo: null,
+    initials: 'VG',
+    objectPosition: 'center',
+  },
+  {
+    name: 'Jeshuaem Sepúlveda',
+    role: 'Oficial de Programación',
+    photo: '/team/jeshuaem-sepulveda.jpeg',
+    initials: 'JS',
+    objectPosition: 'center 35%',
+  },
+  {
+    name: 'Osvaldo Gelabert Toro, M.T.',
+    role: 'Enlace Académico de la UN Tourism',
+    photo: '/team/osvaldo-gelabert.png',
+    initials: 'OG',
+    objectPosition: 'center 48%',
+  },
+  {
+    name: 'Milagros Donato Cintrón, M.S.',
+    role: 'Consultora en Asuntos Tecnológicos',
+    photo: '/team/milagros-donato.jpeg',
+    initials: 'MD',
+    objectPosition: 'center 10%',
+  },
+  {
+    name: 'Michael Colón Santiago',
+    role: 'Especialista en Acceso Aéreo y Conectividad',
+    photo: '/team/michael-colon.png',
+    initials: 'MC',
+    objectPosition: 'center 25%',
+  },
+  {
+    name: 'Jan Manuel Cubero Jiménez',
+    role: 'Gobierno, Política Pública y Relaciones Internacionales',
+    photo: '/team/jan-manuel-cubero.png',
+    initials: 'JC',
+    objectPosition: 'center 25%',
+  },
+  {
+    name: 'Carla Araiza',
+    role: 'Alojamiento y Hospitalidad',
+    photo: '/team/carla-araiza.png',
+    initials: 'CA',
+    objectPosition: 'center 25%',
+  },
+  {
+    name: 'Jorge A. Lacén Aponte',
+    role: 'Turismo Deportivo',
+    photo: '/team/jorge-lacen.png',
+    initials: 'JL',
+    objectPosition: 'center 20%',
+  },
 ];
 
 export const MEMBERS_WE_UNITE = [
@@ -99,8 +159,11 @@ export const PILLARS = [
     iconBg: 'bg-navy text-white',
     spotlight: 'rgba(3, 40, 89, 0.14)',
     accent: 'bg-navy',
-    body:
-      'Unir, representar y fortalecer a todos los componentes de la industria turística de Puerto Rico, promoviendo su desarrollo sostenible, competitivo e inclusivo mediante la educación, la colaboración y la defensa de los intereses del sector.',
+    paragraphs: [
+      'En la Liga de Turismo de Puerto Rico, Inc., transformamos el conocimiento en soluciones que contribuyan al desarrollo integral del turismo en Puerto Rico.',
+      'A través de la investigación, análisis, innovación y la planificación estratégica, promovemos una gestión turística fundamentada en evidencia, capaz de fortalecer la competitividad, sostenibilidad y el desarrollo económico de nuestros destinos.',
+      'Creemos en el valor de conectar a los profesores y estudiantes, gobierno, empresa privada y las comunidades receptoras para convertir el conocimiento en oportunidades y construir, juntos, un futuro turístico más competitivo, sostenible y beneficioso para las presentes y futuras generaciones.',
+    ],
   },
   {
     title: 'Visión',
@@ -109,23 +172,23 @@ export const PILLARS = [
     iconBg: 'bg-tropical text-white',
     spotlight: 'rgba(3, 107, 56, 0.16)',
     accent: 'bg-tropical',
-    body:
-      'Ser la voz líder y el principal motor de colaboración del turismo puertorriqueño, posicionando a Puerto Rico como el destino más auténtico, sostenible y hospitalario del Caribe.',
+    paragraphs: [
+      'Convertirnos en el principal centro de pensamiento, investigación y generación de conocimiento turístico de Puerto Rico, reconocido por nuestra excelencia, independencia técnica y aportación al desarrollo sostenible y competitivo de nuestros destinos.',
+      'Aspiramos a ser una institución de referencia que, mediante la investigación, análisis y la planificación estratégica, contribuya a la toma de decisiones fundamentadas en evidencia y al desarrollo de políticas y soluciones innovadoras para fortalecer el turismo.',
+      'Creemos en el poder de las alianzas entre los profesores y estudiantes, gobierno, empresa privada, comunidades y los organismos internacionales para compartir conocimientos, formar líderes y contribuir al posicionamiento de Puerto Rico como un destino turístico de clase mundial.',
+    ],
   },
   {
-    title: 'Valores Institucionales',
-    eyebrow: 'Lo que nos define',
+    title: 'Objetivos',
+    eyebrow: 'Nuestro compromiso',
     icon: Gem,
     iconBg: 'bg-gold text-navy',
     spotlight: 'rgba(229, 184, 34, 0.22)',
     accent: 'bg-gold',
-    values: [
-      'Orgullo e identidad puertorriqueña',
-      'Integridad y transparencia',
-      'Hospitalidad auténtica',
-      'Colaboración y solidaridad',
-      'Sostenibilidad responsable',
-      'Excelencia en el servicio',
+    paragraphs: [
+      'En la Liga de Turismo de Puerto Rico, Inc., trabajamos para fortalecer el desarrollo turístico mediante la investigación, análisis, planificación estratégica y la innovación, promoviendo iniciativas que contribuyan al crecimiento económico, competitividad y la sostenibilidad de Puerto Rico como destino turístico.',
+      'Nuestros esfuerzos están dirigidos a generar conocimiento especializado mediante estudios, diagnósticos, indicadores y publicaciones que permitan comprender la evolución del sector y fomentar decisiones fundamentadas en evidencia, impulsando propuestas, proyectos y modelos de gestión a largo plazo.',
+      'Fomentamos la educación y capacitación de estudiantes, profesores, profesionales, empresarios, servidores públicos y comunidades, creando espacios para el intercambio de conocimientos y contribuyendo al desarrollo de políticas públicas, soluciones innovadoras y buenas prácticas de gestión.',
     ],
   },
 ];

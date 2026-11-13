@@ -26,7 +26,7 @@ const TONES = {
 
 export default function WhatWeDo() {
   return (
-    <section id="que-hacemos" aria-labelledby="hacemos-title" className="bg-white py-20 sm:py-28">
+    <section id="que-hacemos" aria-labelledby="hacemos-title" className="border-t border-navy/10 bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           id="hacemos-title"
@@ -44,7 +44,7 @@ export default function WhatWeDo() {
                 <SpotlightCard
                   as="article"
                   spotlightColor={t.spotlight}
-                  className="group h-full border border-navy/10 bg-cream"
+                  className="group h-full border border-navy/10 bg-white shadow-md shadow-navy/5"
                 >
                   <span aria-hidden="true" className={`absolute inset-y-0 left-0 w-1.5 ${t.bar}`} />
                   <div className="flex h-full flex-col p-7 sm:p-9">
@@ -64,7 +64,7 @@ export default function WhatWeDo() {
                       {area.points.map((pt) => (
                         <li
                           key={pt}
-                          className="inline-flex items-center gap-2 rounded-lg border border-navy/10 bg-white px-3 py-1.5 text-xs font-semibold text-navy sm:text-sm"
+                          className="inline-flex items-center gap-2 rounded-lg border border-navy/10 bg-cream px-3 py-1.5 text-xs font-semibold text-navy sm:text-sm"
                         >
                           <span aria-hidden="true" className={`h-1.5 w-1.5 rounded-full ${t.dot}`} />
                           {pt}

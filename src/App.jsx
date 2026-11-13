@@ -2,6 +2,7 @@ import Navbar from './components/sections/Navbar.jsx';
 import Hero from './components/sections/Hero.jsx';
 import About from './components/sections/About.jsx';
 import MissionVision from './components/sections/MissionVision.jsx';
+import Team from './components/sections/Team.jsx';
 import WhatWeDo from './components/sections/WhatWeDo.jsx';
 import Impact from './components/sections/Impact.jsx';
 import Contact from './components/sections/Contact.jsx';
@@ -23,6 +24,7 @@ export default function App() {
         <Hero />
         <About />
         <MissionVision />
+        <Team />
         <WhatWeDo />
         <Impact />
         <Contact />

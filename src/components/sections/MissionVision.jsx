@@ -10,8 +10,8 @@ export default function MissionVision() {
         <SectionHeading
           id="mision-title"
           eyebrow="Filosofía Institucional"
-          title="Misión, Visión y Valores"
-          description="Los principios que guían cada programa, alianza e iniciativa de la Liga de Turismo de Puerto Rico, Inc."
+          title="Misión, Visión y Objetivos"
+          description="Transformamos el conocimiento en soluciones basadas en evidencia para el desarrollo integral del turismo en Puerto Rico."
         />
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
@@ -35,6 +35,14 @@ export default function MissionVision() {
                     <h3 className="mb-4 font-serif text-2xl font-bold text-navy">{p.title}</h3>
 
                     {p.body && <p className="text-base leading-relaxed text-navy/80">{p.body}</p>}
+
+                    {p.paragraphs && (
+                      <div className="space-y-3 text-sm leading-relaxed text-navy/80 sm:text-base">
+                        {p.paragraphs.map((para, idx) => (
+                          <p key={idx}>{para}</p>
+                        ))}
+                      </div>
+                    )}
 
                     {p.values && (
                       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
