@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Paleta oficial — Liga de Turismo de Puerto Rico, Inc. (extraída del emblema)
+   ========================================================================== */
+@theme {
+  --color-navy: #032859;          /* Azul Marino — autoridad, alcance global */
+  --color-navy-deep: #021d42;
+  --color-tropical: #036b38;      /* Verde Tropical — sostenibilidad y naturaleza */
+  --color-tropical-light: #6ee7a8;/* Verde claro para texto sobre azul (AA) */
+  --color-gold: #e5b822;          /* Dorado Garita — patrimonio y calidez */
+  --color-gold-light: #f2c94c;
+  --color-gold-ink: #7a5e04;      /* Dorado oscuro para texto sobre fondos claros (AA) */
+  --color-cream: #faf9f5;         /* Lienzo cálido */
+
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-wave-slow: wave-drift 12s ease-in-out infinite;
+  --animate-wave-fast: wave-drift 8s ease-in-out infinite reverse;
+  --animate-spin-slow: spin 40s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes wave-drift {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-48px); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-cream font-sans text-navy;
+  }
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+  ::selection {
+    @apply bg-gold text-navy;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+}
+
+/* ==========================================================================
+   Spotlight / 3D Tilt card (estilo React Bits) — controlado por variables CSS
+   ========================================================================== */
+@layer components {
+  .spotlight-card {
+    transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transition: transform 0.25s ease-out, box-shadow 0.3s ease-out;
+    transform-style: preserve-3d;
+  }
+  .spotlight-card[data-active="true"] {
+    transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-4px);
+    box-shadow: 0 24px 48px -16px rgb(3 40 89 / 0.22);
+  }
+  .spotlight-card__glow {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    background: radial-gradient(
+      440px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+      var(--spot-color),
+      transparent 45%
+    );
+  }
+  .spotlight-card[data-active="true"] .spotlight-card__glow,
+  .spotlight-card:focus-within .spotlight-card__glow {
+    opacity: 1;
+  }
+}
+
+/* Accesibilidad: respeta la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
